@@ -1,0 +1,37 @@
+<!-- Напишите код приложения, интерфейс которого представляет собой 2 input и кнопку submit. 
+В input можно ввести любое число.
+
+При клике на кнопку происходит следующее:
+
+Если оба числа не попадают в диапазон от 100 до 300 или введено не число — 
+выводить ниже текст «одно из чисел вне диапазона от 100 до 300»; 
+Если числа попадают в диапазон от 100 до 300 — 
+сделать запрос c помощью fetch по URL https://picsum.photos/200/300, 
+где первое число — ширина картинки, второе — высота.
+Пример. Если пользователь ввёл 150 и 200, то запрос будет вида https://picsum.photos/150/200.
+После получения данных вывести ниже картинку на экран.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XHR Async</title>
+    <link rel="stylesheet" href="M9_3_XHR_Async.css">
+</head>
+<body>
+
+    <label>Введите ширину картинки:
+        <input class="input_width"  type="number" value="200">
+    </label>
+    <label>Введите высоту картинки:
+        <input class="input_height" type="number" value="100">
+    </label>
+    <button class="btn_add" type="submit">Получить</button>
+    <div class="div_out">
+
+    </div>
+    
+    <script src="M9_4_FETCH.js"></script>
+</body>
+</html>
